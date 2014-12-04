@@ -1,0 +1,12 @@
+print "last modified: %s" % time.ctime(os.path.getmtime(file))
+
+time.gmtime([secs])
+
+t = os.path.getmtime('test.txt')
+diff = time.time() - t
+hours, remainder = divmod(diff, 3600)
+minutes, seconds = divmod(remainder, 60)
+print '%s:%s:%s' % (hours, minutes, seconds)
+0.0:6.0:22.7198677063
+print '%s:%s:%s' % (int(hours), int(minutes), int(seconds))
+0:6:22
